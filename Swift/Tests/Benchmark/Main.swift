@@ -36,7 +36,6 @@ final class Benchmark: XCTestCase {
 					let _ = channel1.writeAndFlush(envelope)
 					do { try promise.futureResult.wait() }
 					catch { XCTFail(error.localizedDescription) }
-					print("reached end")
 					promise = group.next().newPromise()
 					handlerA.reachedEnd = promise
 					handlerB.reachedEnd = promise
