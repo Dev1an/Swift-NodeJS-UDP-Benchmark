@@ -4,20 +4,24 @@ import XCTest
 import NIO
 
 final class Benchmark: XCTestCase {
-	let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-
 	func testBench() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
 		
+		let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
+		var promise: EventLoopPromise<Void> = group.next().newPromise()
+		
+		let handlerA = SequenceHandler(end: promise)
+		let handlerB = SequenceHandler(end: promise)
+
 		let peerA = DatagramBootstrap(group: group)
 			.channelOption(ChannelOptions.socket(SocketOptionLevel(SOL_SOCKET), SO_REUSEADDR), value: 1)
-			.channelInitializer { $0.pipeline.add(handler: SequenceHandler()) }
+			.channelInitializer { $0.pipeline.add(handler: handlerA) }
 			.bind(host: "127.0.0.1", port: 0)
 		let peerB = DatagramBootstrap(group: group)
 			.channelOption(ChannelOptions.socket(SocketOptionLevel(SOL_SOCKET), SO_REUSEADDR), value: 1)
-			.channelInitializer { $0.pipeline.add(handler: SequenceHandler()) }
+			.channelInitializer { $0.pipeline.add(handler: handlerB) }
 			.bind(host: "127.0.0.1", port: 0)
 		
 		do {
@@ -30,8 +34,12 @@ final class Benchmark: XCTestCase {
 				
 				measure {
 					let _ = channel1.writeAndFlush(envelope)
-					do { try channel1.closeFuture.wait() }
+					do { try promise.futureResult.wait() }
 					catch { XCTFail(error.localizedDescription) }
+					print("reached end")
+					promise = group.next().newPromise()
+					handlerA.reachedEnd = promise
+					handlerB.reachedEnd = promise
 				}
 			} else {
 				XCTFail("unable to get bound port")
