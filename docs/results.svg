@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1111 451" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g id="Artboard1" transform="matrix(1.28725,0,0,1,418.622,15.4221)">
+        <rect x="-325.207" y="-15.422" width="862.887" height="450.141" style="fill:none;"/>
+        <g transform="matrix(1.10885,0,0,1.42736,-155.729,-250.817)">
+            <clipPath id="_clip1">
+                <rect x="36" y="172.6" width="400.5" height="300" clip-rule="nonzero"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <text x="36px" y="460px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;">0,000</text>
+                <text x="36px" y="399px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;">1,750</text>
+                <text x="36px" y="337px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;">3,500</text>
+                <text x="36px" y="275px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;">5,250</text>
+                <text x="36px" y="213px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;">7,000</text>
+                <text x="143px" y="470px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;">Macbook</text>
+                <text x="307px" y="470px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;">Raspberry Pi 3 B</text>
+                <text x="166px" y="182px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;">Swift</text>
+                <text x="294px" y="182px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;">NodeJS</text>
+                <g transform="matrix(1,0,0,-1,36,616.4)">
+                    <path d="M37,221.9L400,221.9" style="fill:none;stroke:rgb(184,184,184);stroke-width:0.7px;"/>
+                </g>
+                <g transform="matrix(1,0,0,-1,36,494.4)">
+                    <path d="M37,160.9L400,160.9" style="fill:none;stroke:rgb(184,184,184);stroke-width:0.7px;"/>
+                </g>
+                <g transform="matrix(1,0,0,-1,36,370.4)">
+                    <path d="M37,98.9L400,98.9" style="fill:none;stroke:rgb(184,184,184);stroke-width:0.7px;"/>
+                </g>
+                <g transform="matrix(1,0,0,-1,36,246.4)">
+                    <path d="M37,36.9L400,36.9" style="fill:none;stroke:rgb(184,184,184);stroke-width:0.7px;"/>
+                </g>
+                <g transform="matrix(1,0,0,-1,36,740.4)">
+                    <clipPath id="_clip2">
+                        <rect x="0" y="267.8" width="400.5" height="300" clip-rule="nonzero"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip2)">
+                        <path d="M36.5,283.9L400.5,283.9" style="fill:none;stroke:black;stroke-width:0.7px;stroke-linecap:square;"/>
+                    </g>
+                </g>
+                <g transform="matrix(1,0,0,1,0,-1)">
+                    <rect x="167" y="386" width="73" height="71" style="fill:rgb(97,216,54);"/>
+                </g>
+                <g transform="matrix(1,0,0,1,0,-145)">
+                    <rect x="349" y="386" width="72" height="215" style="fill:rgb(97,216,54);"/>
+                </g>
+                <g transform="matrix(1,0,0,1,0,22)">
+                    <rect x="87" y="386" width="73" height="48" style="fill:rgb(0,162,255);"/>
+                </g>
+                <g transform="matrix(1,0,0,1,0,-78)">
+                    <rect x="269" y="386" width="73" height="148" style="fill:rgb(0,162,255);"/>
+                </g>
+                <g transform="matrix(1,0,0,1,0,-485)">
+                    <rect x="150" y="659" width="9" height="9" style="fill:rgb(0,162,255);"/>
+                </g>
+                <g transform="matrix(1,0,0,1,0,-485)">
+                    <rect x="278" y="659" width="10" height="9" style="fill:rgb(97,216,54);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
