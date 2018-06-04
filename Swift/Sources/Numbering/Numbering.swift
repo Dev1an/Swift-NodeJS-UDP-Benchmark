@@ -1,15 +1,15 @@
 import NIO
 
-final class SequenceHandler: ChannelInboundHandler {
-	typealias InboundIn = AddressedEnvelope<ByteBuffer>
-	typealias InboundOut = AddressedEnvelope<ByteBuffer>
+public final class SequenceHandler: ChannelInboundHandler {
+	public typealias InboundIn = AddressedEnvelope<ByteBuffer>
+	public typealias InboundOut = AddressedEnvelope<ByteBuffer>
 	
-	var reachedEnd: EventLoopPromise<Void>
-	init(end: EventLoopPromise<Void>) {
+	public var reachedEnd: EventLoopPromise<Void>
+	public init(end: EventLoopPromise<Void>) {
 		reachedEnd = end
 	}
 	
-	func channelRead(ctx: ChannelHandlerContext, data: NIOAny) {
+	public func channelRead(ctx: ChannelHandlerContext, data: NIOAny) {
 		let envelope = unwrapInboundIn(data)
 		var buffer = envelope.data
 		
