@@ -24,3 +24,22 @@ I ran the applications on both my Macbook and a Raspberry Pi 3 Model B. The resu
 ![results](https://dev1an.github.io/Swift-NodeJS-UDP-Benchmark/results.svg)
 
 <p align="center">Execution time in milliseconds</p>
+
+## Run it yourself
+
+**Requirements**
+
+- Swift 4.1
+- NodeJS
+- git
+- awk
+
+**Usage**
+
+```sh
+# Shell
+git clone https://github.com/Dev1an/Swift-NodeJS-UDP-Benchmark.git
+cd Swift-NodeJS-UDP-Benchmark
+scripts/benchmark.sh
+```
+
