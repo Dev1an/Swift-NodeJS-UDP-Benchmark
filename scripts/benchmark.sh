@@ -17,7 +17,7 @@ fi
 echo
 echo "🅱️  Measuring swift execution time"
 cd "$here/../Swift"
-swiftOutput=$(swift test -c release 2>&1 | tee /dev/tty)
+swiftOutput=$(swift test -c release -Xswiftc -suppress-warnings 2>&1 | tee /dev/tty)
 
 swiftTimeExtractor="measured[[:space:]]\[Time,[[:space:]]seconds\][[:space:]]average:[[:space:]]([0-9]+(\.[0-9]+)?)"
 
@@ -30,12 +30,12 @@ exit 1
 fi
 
 echo
-echo "🌎  Publishing results"
-swiftTime=$(awk -v Time=$swiftTime 'BEGIN {printf "%.3f",  Time}')
-nodeTime=$(awk -v Time=$nodeTime 'BEGIN {printf "%.3f", Time/1000}')
-swift run Publisher $swiftTime $nodeTime "$(uname -ms)"
-
-echo
 echo "⏱  Measurements"
 echo " Swift took $swiftTime seconds"
 echo " node.js took $nodeTime seconds"
+
+echo
+echo "🌎 Publishing results"
+swiftTime=$(awk -v Time=$swiftTime 'BEGIN {printf "%.3f",  Time}')
+nodeTime=$(awk -v Time=$nodeTime 'BEGIN {printf "%.3f", Time/1000}')
+swift run Publisher $swiftTime $nodeTime "$(uname -ms)" -c release -Xswiftc -suppress-warnings
