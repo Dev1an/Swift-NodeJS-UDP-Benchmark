@@ -43,3 +43,4 @@ cd Swift-NodeJS-UDP-Benchmark
 scripts/benchmark.sh
 ```
 
+This script will show you the execution time of both application implementations and save it anonymously on my mlab database.
